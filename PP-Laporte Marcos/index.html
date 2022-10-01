@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PP Laboratorio III - Marcos Laporte</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <section class="formPpal">
+        <h1>Form Datos</h1>
+        <div class="filtro">
+            <h3>Filtrar por:
+                <select name="filtro" id="filtro">
+                    <option value="T">Todos</option>
+                    <option value="H">Héroes</option>
+                    <option value="V">Villanos</option>
+                </select>
+            </h3>
+        </div>
+        <div class="edadPromedio">
+            <h3>Calcular edad promedio:
+                <input type="number" name="edadPromedio" id="edadPromedio" readonly>
+                <button type="button" class="botones" id="promediarEdad">Calcular</button>
+            </h3>
+        </div>
+        <div class="filtroColumnas">
+            <h3>Mostrar Columnas:</h3>
+            <div id="colFiltro_id">
+                <input type="checkbox" name="id" id="id" checked>
+                <label for="id">ID</label>
+            </div>
+            <div id="colFiltro_nombre">
+                <input type="checkbox" name="nombre" id="nombre" checked>
+                <label for="nombre">Nombre</label>
+            </div>
+            <div id="colFiltro_apellido">
+                <input type="checkbox" name="apellido" id="apellido" checked>
+                <label for="apellido">Apellido</label>
+            </div>
+            <div id="colFiltro_edad">
+                <input type="checkbox" name="edad" id="edad" checked>
+                <label for="edad">Edad</label>
+            </div>
+            <div id="colFiltro_alterego">
+                <input type="checkbox" name="alterego" id="alterego" checked>
+                <label for="alterego">Alterego</label>
+            </div>
+            <div id="colFiltro_ciudad">
+                <input type="checkbox" name="ciudad" id="ciudad" checked>
+                <label for="ciudad">Ciudad</label>
+            </div>
+            <div id="colFiltro_publicado">
+                <input type="checkbox" name="publicado" id="publicado" checked>
+                <label for="publicado">Cantidad de goles</label>
+            </div>
+            <div id="colFiltro_enemigo">
+                <input type="checkbox" name="enemigo" id="enemigo" checked>
+                <label for="enemigo">Enemigo</label>
+            </div>
+            <div id="colFiltro_robos">
+                <input type="checkbox" name="robos" id="robos" checked>
+                <label for="robos">Robos</label>
+            </div>
+            <div id="colFiltro_asesinatos">
+                <input type="checkbox" name="asesinatos" id="asesinatos" checked>
+                <label for="asesinatos">Asesinatos</label>
+            </div>
+        </div>
+        <table>
+            <thead class="cabeceraTabla">
+                <tr>
+                    <th class="col_id">ID</th>
+                    <th class="col_nombre">Nombre</th>
+                    <th class="col_apellido">Apellido</th>
+                    <th class="col_edad">Edad</th>
+                    <th class="col_alterego">Alterego</th>
+                    <th class="col_ciudad">Ciudad</th>
+                    <th class="col_publicado">Publicado</th>
+                    <th class="col_enemigo">Enemigo</th>
+                    <th class="col_robos">Robos</th>
+                    <th class="col_asesinatos">Asesinatos</th>
+                </tr>
+            </thead>
+            <tbody class="cuerpoTabla" id="fuenteFilas"></tbody>
+        </table>
+        <button type="button" class="botones" id="agregar">Agregar</button>
+    </section>
+
+    <section class="formABM">
+        <h3>Formulario ABM</h3>
+        <form>
+            <div class="formInputs">
+                <div id="inp_id">
+                    <label>ID: <input type="number" id="inp_id" readonly></label>
+                </div>
+                <div id="inp_nombre">
+                    <label>Nombre: <input type="text" id="inp_nombre"></label>
+                </div>
+                <div id="inp_apellido">
+                    <label>Apellido: <input type="text" id="inp_apellido"></label>
+                </div>
+                <div id="inp_edad">
+                    <label>Edad: <input type="number" min="16" id="inp_edad"></label>
+                </div>
+                <div id="inp_tipo">
+                    <label>Tipo:
+                        <select id="selTipo">
+                            <option value='H'>Héroes</option>
+                            <option value='V'>Villanos</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="inputHeroe">
+                    <div id="inp_alterego">
+                        <label>Alterego: <input type="text" id="inp_alterego"></label>
+                    </div>
+                    <div id="inp_ciudad">
+                        <label>Ciudad: <input type="text" id="inp_ciudad"></label>
+                    </div>
+                    <div id="inp_publicado">
+                        <label>Publicado: <input type="number" min="1941" max="2022" id="inp_publicado"></label>
+                    </div>
+                </div>
+                <div class="inputVillano">
+                    <div id="inp_enemigo">
+                        <label>Enemigo: <input type="text" id="inp_enemigo"></label>
+                    </div>
+                    <div id="inp_robos">
+                        <label>Robos: <input type="number" min="1" id="inp_robos"></label>
+                    </div>
+                    <div id="inp_asesinatos">
+                        <label>Asesinatos: <input type="number" min="1" id="inp_asesinatos"></label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="formBotones">
+            <button type="submit" class="botones" id="alta">Alta</button>
+            <button type="submit" class="botones" id="modificar">Modificar</button>
+            <button type="submit" class="botones" id="eliminar">Eliminar</button>
+            <button type="button" class="botones" id="cancelar">Cancelar</button>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="clases.js"></script>
+    <script type="text/javascript" src="funciones.js"></script>
+</body>
+
+</html>
