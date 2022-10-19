@@ -25,7 +25,7 @@ class Heroe extends Persona{
         super(i, n, a, e);
         this.alterego = aE || "Unknown";
         this.ciudad = c || "Chacarita";
-        parseInt(p) > 1940 ? this.publicado = p : this.publicado = 1941;
+        parseInt(p) > 1940 && parseInt(p) < 2022 ? this.publicado = p : this.publicado = Math.floor((Math.random()*(2022-1941))+1941);
     }
 
     toString() {

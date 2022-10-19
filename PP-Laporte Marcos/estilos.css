@@ -15,7 +15,8 @@ h1 {
 
 table, .cabeceraTabla *{
     border: 1px solid #282A35;
-    border-collapse: collapse;
+    border-radius: 5px;
+    border-collapse: inherit;
     background: gainsboro;
     padding: 10px;
     width: auto;
@@ -30,6 +31,7 @@ table, .cabeceraTabla *{
     background: #e8edff;
     border: 1px solid #000; 
     font-size: 12px;
+    cursor: pointer;
 }
 
 .formABM {
@@ -41,6 +43,7 @@ table, .cabeceraTabla *{
     margin: 10px;
     border-radius:4px;
     background-color:#dde0ea;
+    font-size: 150%;
 }
 
 .inputVillano {

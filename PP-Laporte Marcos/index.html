@@ -15,9 +15,9 @@
         <div class="filtro">
             <h3>Filtrar por:
                 <select name="filtro" id="filtro">
-                    <option value="T">Todos</option>
-                    <option value="H">Héroes</option>
-                    <option value="V">Villanos</option>
+                    <option value='T'>Todos</option>
+                    <option value='H'>Héroes</option>
+                    <option value='V'>Villanos</option>
                 </select>
             </h3>
         </div>
@@ -55,7 +55,7 @@
             </div>
             <div id="colFiltro_publicado">
                 <input type="checkbox" name="publicado" id="publicado" checked>
-                <label for="publicado">Cantidad de goles</label>
+                <label for="publicado">Publicado</label>
             </div>
             <div id="colFiltro_enemigo">
                 <input type="checkbox" name="enemigo" id="enemigo" checked>
@@ -70,22 +70,22 @@
                 <label for="asesinatos">Asesinatos</label>
             </div>
         </div>
-        <table>
+        <table id="tabla">
             <thead class="cabeceraTabla">
-                <tr>
-                    <th class="col_id">ID</th>
-                    <th class="col_nombre">Nombre</th>
-                    <th class="col_apellido">Apellido</th>
-                    <th class="col_edad">Edad</th>
-                    <th class="col_alterego">Alterego</th>
-                    <th class="col_ciudad">Ciudad</th>
-                    <th class="col_publicado">Publicado</th>
-                    <th class="col_enemigo">Enemigo</th>
-                    <th class="col_robos">Robos</th>
-                    <th class="col_asesinatos">Asesinatos</th>
+                <tr class="fila">
+                    <th class="col_id" id="cab_id">ID</th>
+                    <th class="col_nombre" id="cab_nombre">Nombre</th>
+                    <th class="col_apellido" id="cab_apellido">Apellido</th>
+                    <th class="col_edad" id="cab_edad">Edad</th>
+                    <th class="col_alterego" id="cab_alterego">Alterego</th>
+                    <th class="col_ciudad" id="cab_ciudad">Ciudad</th>
+                    <th class="col_publicado" id="cab_publicado">Publicado</th>
+                    <th class="col_enemigo" id="cab_enemigo">Enemigo</th>
+                    <th class="col_robos" id="cab_robos">Robos</th>
+                    <th class="col_asesinatos" id="cab_asesinatos">Asesinatos</th>
                 </tr>
             </thead>
-            <tbody class="cuerpoTabla" id="fuenteFilas"></tbody>
+            <tbody class="cuerpoTabla" id="fuenteCuerpo"></tbody>
         </table>
         <button type="button" class="botones" id="agregar">Agregar</button>
     </section>
