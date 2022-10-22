@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPP Laboratorio III - Marcos Laporte</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <section id="formPpal" class="forms">
+        <h1 id="titulo">Form Datos</h1>
+        <div class="header">
+            <div class="filtroTablaTipo">
+                <h3>Filtrar por:
+                    <select name="filtro" id="sel_tipo">
+                        <option value='T'>Todos</option>
+                        <option value='A'>Aereo</option>
+                        <option value='C'>Terrestre</option>
+                    </select>
+                </h3>
+            </div>
+
+            <div class="velocidadPromedio">
+                <h3>Promedio velocidad máxima:
+                    <input type="number" name="velocidadPromedio" id="inpVelMaxPromedio" readonly>
+                    <button type="button" class="botones" id="btnPromediarVelMax">Calcular</button>
+                </h3>
+            </div>
+        </div>
+
+        <div class="filtroColumnas">
+            <h3>Mostrar Columnas:</h3>
+            <div id="colFiltro_id">
+                <input type="checkbox" name="id" id="chkBxId" checked>
+                <label for="id">ID</label>
+            </div>
+            <div id="colFiltro_modelo">
+                <input type="checkbox" name="modelo" id="chkBxModelo" checked>
+                <label for="modelo">Modelo</label>
+            </div>
+            <div id="colFiltro_anoFab">
+                <input type="checkbox" name="anoFab" id="chkBxAnoFab" checked>
+                <label for="anoFab">Año fab</label>
+            </div>
+            <div id="colFiltro_velMax">
+                <input type="checkbox" name="velMax" id="chkBxVelMax" checked>
+                <label for="velMax">Vel Máx</label>
+            </div>
+            <div id="colFiltro_altMax">
+                <input type="checkbox" name="altMax" id="chkBxAltMax" checked>
+                <label for="altMax">Alt Máx</label>
+            </div>
+            <div id="colFiltro_autonomia">
+                <input type="checkbox" name="autonomia" id="chkBxAutonomia" checked>
+                <label for="autonomia">Autonomía</label>
+            </div>
+            <div id="colFiltro_cantPue">
+                <input type="checkbox" name="cantPue" id="chkBxCantPue" checked>
+                <label for="cantPue">Cant Pue</label>
+            </div>
+            <div id="colFiltro_cantRue">
+                <input type="checkbox" name="cantRue" id="chkBxCantRue" checked>
+                <label for="cantRue">Cant Rue</label>
+            </div>
+        </div>
+        <table id="tabla">
+            <thead class="cabeceraTabla">
+                <tr id="fila0">
+                    <th class="col_id" id="cab_id">ID</th>
+                    <th class="col_modelo" id="cab_modelo">Modelo</th>
+                    <th class="col_anoFab" id="cab_anoFab">Año fab</th>
+                    <th class="col_velMax" id="cab_velMax">Vel Máx</th>
+                    <th class="col_altMax" id="cab_altMax">Alt Máx</th>
+                    <th class="col_autonomia" id="cab_autonomia">Autonomía</th>
+                    <th class="col_cantPue" id="cab_cantPue">Cant Pue</th>
+                    <th class="col_cantRue" id="cab_cantRue">Cant Rue</th>
+                </tr>
+            </thead>
+            <tbody class="cuerpoTabla" id="fuenteCuerpo"></tbody>
+        </table>
+        <button type="button" class="botones" id="agregar">Agregar</button>
+    </section>
+
+    <section id="formABM" class="forms">
+        <h3>Form ABM</h3>
+        <form>
+            <div class="formInputs">
+                <div id="div_id">
+                    <label>ID: <input type="number" id="inp_id" readonly></label>
+                </div>
+                <div id="div_modelo">
+                    <label>Modelo: <input type="text" id="inp_modelo"></label>
+                </div>
+                <div id="div_anoFab">
+                    <label>Año Fabricación: <input type="number" min="1900" id="inp_anoFab"></label>
+                </div>
+                <div id="div_velMax">
+                    <label>Velocidad Máxima: <input type="number" min="1" id="inp_velMax"></label>
+                </div>
+                <div id="div_tipo">
+                    <label>Tipo:
+                        <select id="abmSel_tipo">
+                            <option value='A'>Aereo</option>
+                            <option value='C'>Terrestre</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="inputAereo">
+                    <div id="div_altMax">
+                        <label>Altura Máxima: <input type="number" min="1" id="inp_altMax"></label>
+                    </div>
+                    <div id="div_autonomia">
+                        <label>Autonomía: <input type="number" min="1" id="inp_autonomia"></label>
+                    </div>
+                </div>
+                <div class="inputTerrestre">
+                    <div id="div_cantPue">
+                        <label>Cantidad Puertas: <input type="number" min="1" id="inp_cantPue"></label>
+                    </div>
+                    <div id="div_cantRue">
+                        <label>Cantidad Ruedas: <input type="number" min="1" id="inp_cantRue"></label>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="abmBotones">
+            <button type="submit" class="botones" id="alta">Alta</button>
+            <button type="submit" class="botones" id="eliminar">Eliminar</button>
+            <button type="button" class="botones" id="cancelar">Cancelar</button>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="vehiculo.js"></script>
+    <script type="text/javascript" src="funciones.js"></script>
+</body>
+
+</html>

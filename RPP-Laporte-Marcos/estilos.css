@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#titulo {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formABM {
+    width: 30%;
+    justify-content: center;
+    padding: 16px;
+    margin: 10px;
+    top: 25px;
+    border-radius: 4px;
+    background-color: #dde0ea;
+    font-size: 150%;
+}
+
+.filtroTablaTipo,
+.velocidadPromedio,
+.filtroColumnas * {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+table,
+.cabeceraTabla * {
+    border: 1px solid #282A35;
+    border-radius: 5px;
+    border-collapse: inherit;
+    background: gainsboro;
+    text-align: center;
+    padding: 10px;
+    width: auto;
+}
+
+.cabeceraTabla {
+    cursor: pointer;
+}
+
+.cuerpoTabla * {
+    padding: 8px;
+    background: #e8edff;
+    border: 1px solid #000;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.inputTerrestre {
+    display: none;
+}
+
+.botones {
+    cursor: pointer;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 2mm;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 25px;
+}
+
+.abmBotones {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#formABM label, #formABM input, #formABM select {
+    width: 35%;
+    margin: 10px;
+}
+
+.header{
+    display: inline-block;
+}
