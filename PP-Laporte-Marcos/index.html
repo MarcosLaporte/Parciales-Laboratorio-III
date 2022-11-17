@@ -10,69 +10,73 @@
 </head>
 
 <body>
-    <section class="formPpal">
-        <h1>Form Datos</h1>
-        <div class="filtro">
-            <h3>Filtrar por:
-                <select name="filtro" id="filtro">
-                    <option value='T'>Todos</option>
-                    <option value='H'>Héroes</option>
-                    <option value='V'>Villanos</option>
-                </select>
-            </h3>
+    <section id="formPpal" class="forms">
+        <h1 id="titulo">Form Datos</h1>
+        <div class="header">
+            <div class="filtroTablaTipo">
+                <h3>Filtrar por:
+                    <select name="filtro" id="sel_tipo">
+                        <option value='T'>Todos</option>
+                        <option value='H'>Héroes</option>
+                        <option value='V'>Villanos</option>
+                    </select>
+                </h3>
+            </div>
+
+            <div class="edadPromedio">
+                <h3>Calcular edad promedio:
+                    <input type="number" name="edadPromedio" id="inpEdadPromedio" readonly>
+                    <button type="button" class="botones" id="btnPromediarEdad">Calcular</button>
+                </h3>
+            </div>
         </div>
-        <div class="edadPromedio">
-            <h3>Calcular edad promedio:
-                <input type="number" name="edadPromedio" id="edadPromedio" readonly>
-                <button type="button" class="botones" id="promediarEdad">Calcular</button>
-            </h3>
-        </div>
+
         <div class="filtroColumnas">
             <h3>Mostrar Columnas:</h3>
             <div id="colFiltro_id">
-                <input type="checkbox" name="id" id="id" checked>
+                <input type="checkbox" name="id" id="chkBxId" checked>
                 <label for="id">ID</label>
             </div>
             <div id="colFiltro_nombre">
-                <input type="checkbox" name="nombre" id="nombre" checked>
+                <input type="checkbox" name="nombre" id="chkBxNombre" checked>
                 <label for="nombre">Nombre</label>
             </div>
             <div id="colFiltro_apellido">
-                <input type="checkbox" name="apellido" id="apellido" checked>
+                <input type="checkbox" name="apellido" id="chkBxApellido" checked>
                 <label for="apellido">Apellido</label>
             </div>
             <div id="colFiltro_edad">
-                <input type="checkbox" name="edad" id="edad" checked>
+                <input type="checkbox" name="edad" id="chkBxEdad" checked>
                 <label for="edad">Edad</label>
             </div>
             <div id="colFiltro_alterego">
-                <input type="checkbox" name="alterego" id="alterego" checked>
+                <input type="checkbox" name="alterego" id="chkBxAlterego" checked>
                 <label for="alterego">Alterego</label>
             </div>
             <div id="colFiltro_ciudad">
-                <input type="checkbox" name="ciudad" id="ciudad" checked>
+                <input type="checkbox" name="ciudad" id="chkBxCiudad" checked>
                 <label for="ciudad">Ciudad</label>
             </div>
             <div id="colFiltro_publicado">
-                <input type="checkbox" name="publicado" id="publicado" checked>
+                <input type="checkbox" name="publicado" id="chkBxPublicado" checked>
                 <label for="publicado">Publicado</label>
             </div>
             <div id="colFiltro_enemigo">
-                <input type="checkbox" name="enemigo" id="enemigo" checked>
+                <input type="checkbox" name="enemigo" id="chkBxEnemigo" checked>
                 <label for="enemigo">Enemigo</label>
             </div>
             <div id="colFiltro_robos">
-                <input type="checkbox" name="robos" id="robos" checked>
+                <input type="checkbox" name="robos" id="chkBxRobos" checked>
                 <label for="robos">Robos</label>
             </div>
             <div id="colFiltro_asesinatos">
-                <input type="checkbox" name="asesinatos" id="asesinatos" checked>
+                <input type="checkbox" name="asesinatos" id="chkBxAsesinatos" checked>
                 <label for="asesinatos">Asesinatos</label>
             </div>
         </div>
         <table id="tabla">
             <thead class="cabeceraTabla">
-                <tr class="fila">
+                <tr id="fila0">
                     <th class="col_id" id="cab_id">ID</th>
                     <th class="col_nombre" id="cab_nombre">Nombre</th>
                     <th class="col_apellido" id="cab_apellido">Apellido</th>
@@ -90,57 +94,57 @@
         <button type="button" class="botones" id="agregar">Agregar</button>
     </section>
 
-    <section class="formABM">
+    <section id="formABM" class="forms">
         <h3>Formulario ABM</h3>
         <form>
             <div class="formInputs">
-                <div id="inp_id">
+                <div id="div_id">
                     <label>ID: <input type="number" id="inp_id" readonly></label>
                 </div>
-                <div id="inp_nombre">
+                <div id="div_nombre">
                     <label>Nombre: <input type="text" id="inp_nombre"></label>
                 </div>
-                <div id="inp_apellido">
+                <div id="div_apellido">
                     <label>Apellido: <input type="text" id="inp_apellido"></label>
                 </div>
-                <div id="inp_edad">
+                <div id="div_edad">
                     <label>Edad: <input type="number" min="16" id="inp_edad"></label>
                 </div>
-                <div id="inp_tipo">
+                <div id="div_tipo">
                     <label>Tipo:
-                        <select id="selTipo">
+                        <select id="abmSel_tipo">
                             <option value='H'>Héroes</option>
                             <option value='V'>Villanos</option>
                         </select>
                     </label>
                 </div>
                 <div class="inputHeroe">
-                    <div id="inp_alterego">
+                    <div id="div_alterego">
                         <label>Alterego: <input type="text" id="inp_alterego"></label>
                     </div>
-                    <div id="inp_ciudad">
+                    <div id="div_ciudad">
                         <label>Ciudad: <input type="text" id="inp_ciudad"></label>
                     </div>
-                    <div id="inp_publicado">
+                    <div id="div_publicado">
                         <label>Publicado: <input type="number" min="1941" max="2022" id="inp_publicado"></label>
                     </div>
                 </div>
                 <div class="inputVillano">
-                    <div id="inp_enemigo">
+                    <div id="div_enemigo">
                         <label>Enemigo: <input type="text" id="inp_enemigo"></label>
                     </div>
-                    <div id="inp_robos">
+                    <div id="div_robos">
                         <label>Robos: <input type="number" min="1" id="inp_robos"></label>
                     </div>
-                    <div id="inp_asesinatos">
+                    <div id="div_asesinatos">
                         <label>Asesinatos: <input type="number" min="1" id="inp_asesinatos"></label>
                     </div>
                 </div>
             </div>
         </form>
-        <div class="formBotones">
+
+        <div class="abmBotones">
             <button type="submit" class="botones" id="alta">Alta</button>
-            <button type="submit" class="botones" id="modificar">Modificar</button>
             <button type="submit" class="botones" id="eliminar">Eliminar</button>
             <button type="button" class="botones" id="cancelar">Cancelar</button>
         </div>
