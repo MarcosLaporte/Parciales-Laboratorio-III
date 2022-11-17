@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo Segundo Parcial</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <section id="formPpal" class="forms">
+        <div class="container">
+            <h1 style="text-align:center;">Formulario Lista</h1>
+
+            <table id="tabla">
+                <thead class="cabeceraTabla">
+                    <tr id="fila0">
+                        <th class="col_id" id="cab_id">ID</th>
+                        <th class="col_nombre" id="cab_nombre">Nombre</th>
+                        <th class="col_apellido" id="cab_apellido">Apellido</th>
+                        <th class="col_edad" id="cab_edad">Edad</th>
+                        <th class="col_alterego" id="cab_alterego">Alterego</th>
+                        <th class="col_ciudad" id="cab_ciudad">Ciudad</th>
+                        <th class="col_publicado" id="cab_publicado">Publicado</th>
+                        <th class="col_enemigo" id="cab_enemigo">Enemigo</th>
+                        <th class="col_robos" id="cab_robos">Robos</th>
+                        <th class="col_asesinatos" id="cab_asesinatos">Asesinatos</th>
+                        <th class="col_modificar" id="cab_modificar">Modificar</th>
+                        <th class="col_eliminar" id="cab_eliminar">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody class="cuerpoTabla" id="fuenteCuerpo"></tbody>
+            </table>
+            <button type="button" class="botones" id="agregar">Agregar elemento</button>
+        </div>
+    </section>
+    
+    <section id="formABM" class="forms">
+        <h3>Formulario ABM</h3>
+        <form>
+            <div class="formInputs">
+                <div id="div_id">
+                    <label>ID: <input type="number" id="inp_id" readonly></label>
+                </div>
+                <div id="div_nombre">
+                    <label>Nombre: <input type="text" id="inp_nombre"></label>
+                </div>
+                <div id="div_apellido">
+                    <label>Apellido: <input type="text" id="inp_apellido"></label>
+                </div>
+                <div id="div_edad">
+                    <label>Edad: <input type="number" min="16" id="inp_edad"></label>
+                </div>
+                <div id="div_tipo">
+                    <label>Tipo:
+                        <select id="abmSel_tipo">
+                            <option value='H'>Héroes</option>
+                            <option value='V'>Villanos</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="inputHeroe">
+                    <div id="div_alterego">
+                        <label>Alterego: <input type="text" id="inp_alterego"></label>
+                    </div>
+                    <div id="div_ciudad">
+                        <label>Ciudad: <input type="text" id="inp_ciudad"></label>
+                    </div>
+                    <div id="div_publicado">
+                        <label>Publicado: <input type="number" min="1941" max="2022" id="inp_publicado"></label>
+                    </div>
+                </div>
+                <div class="inputVillano">
+                    <div id="div_enemigo">
+                        <label>Enemigo: <input type="text" id="inp_enemigo"></label>
+                    </div>
+                    <div id="div_robos">
+                        <label>Robos: <input type="number" min="1" id="inp_robos"></label>
+                    </div>
+                    <div id="div_asesinatos">
+                        <label>Asesinatos: <input type="number" min="1" id="inp_asesinatos"></label>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="abmBotones">
+            <button type="submit" class="botones" id="aceptar">Alta</button>
+            <button type="button" class="botones" id="cancelar">Cancelar</button>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="clases.js"></script>
+    <script type="text/javascript" src="funciones.js"></script>
+</body>
+
+</html>
